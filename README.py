@@ -1,15 +1,12 @@
 import time
 
-def pomodoro_timer():
-    print("开始专注时间！")
-    for i in reversed(range(1, 26)):
-        minutes = i // 60
-        seconds = i % 60
-        print(f"还有 {minutes:02d}:{seconds:02d}...")
-        time.sleep(1)
-    print("休息时间到了！")
+activity = 0
 
 while True:
-    pomodoro_timer()
-    print("休息一下，开始下一个番茄时间。")
-    time.sleep(300)  # 休眠5分钟，以便专注一段时间后再次集中注意力
+    # 模拟用户的一些活动
+    time.sleep(5)
+    activity += 1
+
+    # 每隔一段时间打印出当前的活跃度
+    if activity % 5 == 0:
+        print("当前活跃度：", activity)
